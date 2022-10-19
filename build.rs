@@ -8,6 +8,6 @@ fn main() {
     let mut config = Config::default();
 
     // Change the SHA output to the short variant
-    // *config.git_mut().sha_kind_mut() = ShaKind::Short;
-    // vergen(config).expect("ljlkj");
+    *config.git_mut().sha_kind_mut() = ShaKind::Short;
+    vergen(config).unwrap();
 }
